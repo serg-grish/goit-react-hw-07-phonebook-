@@ -1,5 +1,5 @@
 
-import ContactItem from './ContactTemplate'
+import ContactItem from './ContactListItem/ContactListItem'
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
@@ -31,9 +31,6 @@ export default function ContactList() {
             </ul> 
     );
 };
-
 ContactList.propTypes = {
     contacts: PropTypes.array,
 }
- 
-

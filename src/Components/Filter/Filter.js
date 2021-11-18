@@ -1,5 +1,4 @@
 import shortid from "shortid";
-// import PropTypes from 'prop-types';
 import s from './Filter.module.css';
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
@@ -11,7 +10,8 @@ export default function Filter() {
     const filteredID = shortid.generate();
     return (
         <>
-            <label htmlFor={filteredID} className={s.filterLabel}>Find contacts by name
+            <label htmlFor={filteredID} className={s.filterLabel}>
+            <h3>Find contacts by name</h3>
                 <input type="text"
                     id={filteredID}
                     value={filter}

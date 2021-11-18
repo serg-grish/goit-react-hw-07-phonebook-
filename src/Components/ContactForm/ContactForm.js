@@ -1,6 +1,4 @@
-// import react, { Component } from "react";
 import { useState } from 'react';
-// import shortid from 'shortid';
 import s from './Contacts.module.css';
 import { addContacts } from '../../redux/contacts/contactsOperations'
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,20 +6,13 @@ import { getContacts } from '../../redux/contacts/contactsSelectors';
 
 
 export default function InputForm() {
-
- 
-
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
-//  const nameInputId = shortid.generate();
-//   const numberInputId = shortid.generate();
-  
   const dispatch = useDispatch();
   const contacts = useSelector(state => getContacts(state));
 
-
-  const handleInputChange = e => {
+  const handleChange = e => {
     const { name, value } = e.currentTarget;
     switch (name) {
       case 'name':
@@ -69,7 +60,7 @@ export default function InputForm() {
               title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
               required
               value={name}
-              onChange={handleInputChange}
+              onChange={handleChange}
                         // id={nameInputId}
             />
           </label>
@@ -83,7 +74,7 @@ export default function InputForm() {
               title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
               required
               value={number}
-                        onChange={handleInputChange}
+                        onChange={handleChange}
                         // id={numberInputId}
             />
           </label>

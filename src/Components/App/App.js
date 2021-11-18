@@ -1,6 +1,7 @@
-import InputForm from './Components/ContactForm';
-import { ContactList } from './Components/ContactList';
-import Filter from './Components/Filter';
+import InputForm from '../ContactForm';
+import { ContactList } from '../ContactList';
+import Filter from '../Filter';
+import './app.scss';
 
 
 
