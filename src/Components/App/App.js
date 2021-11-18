@@ -1,5 +1,5 @@
-import InputForm from '../ContactForm';
 import { ContactList } from '../ContactList';
+import InputForm from '../ContactForm';
 import Filter from '../Filter';
 import './app.scss';
 

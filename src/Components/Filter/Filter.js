@@ -1,8 +1,7 @@
-import shortid from "shortid";
-import s from './Filter.module.css';
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
 import { filterContacts } from "../../redux/contacts/contactsActions";
+import { useDispatch, useSelector } from "react-redux";
+import s from './Filter.module.css';
+import shortid from "shortid";
 
 export default function Filter() {
     const filter = useSelector(state => state.filter);
@@ -25,7 +24,3 @@ export default function Filter() {
     );
 };
 
-// Filter.propTypes = {
-//     value: PropTypes.string,
-//     onchange: PropTypes.func,
-// }
